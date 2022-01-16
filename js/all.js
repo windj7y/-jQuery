@@ -27,9 +27,9 @@ $(document).ready(function () {
 
   lightbox.option({
     'resizeDuration': 200,
-    'positionFromTop': 200,
+    'positionFromTop': 300,
     'wrapAround': true
-  })  
+  })
 
   $('.top-link').click(function (e) { 
     e.preventDefault();
@@ -37,4 +37,14 @@ $(document).ready(function () {
       scrollTop: 0,
     }, 1000);
   });
+
+  function showTopBtn() {
+    if ($(this).scrollTop() > 500) {
+      $('.top-link').fadeIn();
+    } else {
+      $('.top-link').fadeOut();
+    }
+  }
+
+  $(window).scroll(showTopBtn);
 });

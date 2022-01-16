@@ -159,8 +159,10 @@ a {
 .banner-text {
   width: 100%;
   position: absolute;
-  top: 94px;
+  top: 50%;
   left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   padding: 40px 60px;
   background: rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -279,6 +281,7 @@ a {
 }
 
 .top-link {
+  display: none;
   position: fixed;
   right: 20px;
   bottom: 20px;
